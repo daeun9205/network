@@ -17,6 +17,8 @@ public class TimeServer {
 		DatagramSocket datagramSocket = null;
 
 		try{
+			
+			datagramSocket = new DatagramSocket(PORT);
 			SimpleDateFormat format = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss a" );
 			String data = format.format( new Date() );
 			while(true){
